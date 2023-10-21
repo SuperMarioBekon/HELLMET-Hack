@@ -720,8 +720,8 @@ local script = G2L["32"];
 	button.MouseButton1Click:Connect(function()
 		if not isPlaying then
 			isPlaying = true
-			fadeOut()
 			soundInstance:Play()
+			fadeOut()
 		end
 	end)
 end;
