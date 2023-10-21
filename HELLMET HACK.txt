@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER
 ]=]
 
--- Instances: 56 | Scripts: 9 | Modules: 0
+-- Instances: 57 | Scripts: 9 | Modules: 0
 local G2L = {};
 
 -- StarterGui.Hellmet Hack
@@ -446,24 +446,38 @@ G2L["35"]["Name"] = [[Unlock mouse on X ( in first person )]];
 G2L["35"]["BackgroundTransparency"] = 1;
 G2L["35"]["Position"] = UDim2.new(-0.44841712713241577, 0, 1.3238444328308105, 0);
 
+-- StarterGui.Hellmet Hack.Main.Info.Made by supermariobekon
+G2L["36"] = Instance.new("TextLabel", G2L["33"]);
+G2L["36"]["BorderSizePixel"] = 0;
+G2L["36"]["BackgroundColor3"] = Color3.fromRGB(126, 183, 106);
+G2L["36"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["36"]["TextSize"] = 12;
+G2L["36"]["TextColor3"] = Color3.fromRGB(44, 60, 37);
+G2L["36"]["Size"] = UDim2.new(0, 97, 0, 30);
+G2L["36"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["36"]["Text"] = [[Made by supermariobekon]];
+G2L["36"]["Name"] = [[Made by supermariobekon]];
+G2L["36"]["BackgroundTransparency"] = 1;
+G2L["36"]["Position"] = UDim2.new(-0.11852020770311356, 0, 0.32384440302848816, 0);
+
 -- StarterGui.Hellmet Hack.Gui futures
-G2L["36"] = Instance.new("TextButton", G2L["1"]);
-G2L["36"]["Modal"] = true;
-G2L["36"]["TextTransparency"] = 1;
-G2L["36"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["36"]["TextSize"] = 14;
-G2L["36"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["36"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["36"]["Visible"] = false;
-G2L["36"]["Name"] = [[Gui futures]];
+G2L["37"] = Instance.new("TextButton", G2L["1"]);
+G2L["37"]["Modal"] = true;
+G2L["37"]["TextTransparency"] = 1;
+G2L["37"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["37"]["TextSize"] = 14;
+G2L["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["37"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["37"]["Visible"] = false;
+G2L["37"]["Name"] = [[Gui futures]];
 
 -- StarterGui.Hellmet Hack.Gui futures.UnlockMouse
-G2L["37"] = Instance.new("LocalScript", G2L["36"]);
-G2L["37"]["Name"] = [[UnlockMouse]];
+G2L["38"] = Instance.new("LocalScript", G2L["37"]);
+G2L["38"]["Name"] = [[UnlockMouse]];
 
 -- StarterGui.Hellmet Hack.Gui futures.Hide/UnDelete Gui
-G2L["38"] = Instance.new("LocalScript", G2L["36"]);
-G2L["38"]["Name"] = [[Hide/UnDelete Gui]];
+G2L["39"] = Instance.new("LocalScript", G2L["37"]);
+G2L["39"]["Name"] = [[Hide/UnDelete Gui]];
 
 -- StarterGui.Hellmet Hack.Main.Tabs.TabsScript
 local function C_f()
@@ -727,8 +741,8 @@ local script = G2L["32"];
 end;
 task.spawn(C_32);
 -- StarterGui.Hellmet Hack.Gui futures.UnlockMouse
-local function C_37()
-local script = G2L["37"];
+local function C_38()
+local script = G2L["38"];
 	local Plr = game.Players.LocalPlayer
 	
 	Plr:GetMouse().KeyDown:Connect(function(K)
@@ -754,10 +768,10 @@ local script = G2L["37"];
 		end
 	end)
 end;
-task.spawn(C_37);
+task.spawn(C_38);
 -- StarterGui.Hellmet Hack.Gui futures.Hide/UnDelete Gui
-local function C_38()
-local script = G2L["38"];
+local function C_39()
+local script = G2L["39"];
 	script.Parent.Parent:SetAttribute("ResetOnSpawn", false)
 	
 	local userInputService = game:GetService("UserInputService")
@@ -773,6 +787,6 @@ local script = G2L["38"];
 		end
 	end)
 end;
-task.spawn(C_38);
+task.spawn(C_39);
 
 return G2L["1"], require;
