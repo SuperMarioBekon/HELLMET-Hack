@@ -699,12 +699,11 @@ local script = G2L["21"];
 	local function updateAttributes()
 		local player = game:GetService("Players").LocalPlayer
 		local backpack = player.Backpack
-		
 	
 		for _, tool in pairs(backpack:GetChildren()) do
 			local ammoAttribute = tool:GetAttribute("Firerate")
 			if ammoAttribute then
-				tool:SetAttribute("Firerate", isActive and 9999 or 55)
+				tool:SetAttribute("Firerate", isActive and ammoAttribute * 1000 or ammoAttribute / 1000)
 			end
 		end
 	end
@@ -716,18 +715,18 @@ local script = G2L["21"];
 		for _, tool in pairs(char:GetChildren()) do
 			local ammoAttribute = tool:GetAttribute("Firerate")
 			if ammoAttribute then
-				tool:SetAttribute("Firerate", isActive and 9999 or 55)
+				tool:SetAttribute("Firerate", isActive and ammoAttribute * 1000 or ammoAttribute / 1000)
 			end
 		end
 	end
 	
 	local function startLoop()
+		updateAttributes()
+		updateAttributes1()
 		while isActive do
-			wait(0.1)
-			updateAttributes()
-			updateAttributes1()
 			textLabel:TweenPosition(newPosition, Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.5, true)
 			textLabel.BackgroundColor3 = Color3.fromRGB(43, 59, 36)
+			wait(0.1)
 		end
 		textLabel:TweenPosition(originalPosition, Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.5, true)
 		textLabel.BackgroundColor3 = Color3.fromRGB(182, 182, 182)
@@ -763,7 +762,7 @@ local script = G2L["2b"];
 		for _, tool in pairs(backpack:GetChildren()) do
 			local ammoAttribute = tool:GetAttribute("BaseDamage")
 			if ammoAttribute then
-				tool:SetAttribute("BaseDamage", isActive and 9999 or 100)
+				tool:SetAttribute("BaseDamage", isActive and ammoAttribute * 1000 or ammoAttribute / 1000)
 			end
 		end
 	end
@@ -775,18 +774,18 @@ local script = G2L["2b"];
 		for _, tool in pairs(char:GetChildren()) do
 			local ammoAttribute = tool:GetAttribute("BaseDamage")
 			if ammoAttribute then
-				tool:SetAttribute("BaseDamage", isActive and 9999 or 100)
+				tool:SetAttribute("BaseDamage", isActive and ammoAttribute * 1000 or ammoAttribute / 1000)
 			end
 		end
 	end
 	
 	local function startLoop()
+		updateAttributes()
+		updateAttributes1()
 		while isActive do
-			wait(0.1)
-			updateAttributes()
-			updateAttributes1()
 			textLabel:TweenPosition(newPosition, Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.5, true)
 			textLabel.BackgroundColor3 = Color3.fromRGB(43, 59, 36)
+			wait(0.1)
 		end
 		textLabel:TweenPosition(originalPosition, Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.5, true)
 		textLabel.BackgroundColor3 = Color3.fromRGB(182, 182, 182)
