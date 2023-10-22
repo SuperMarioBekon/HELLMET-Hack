@@ -35,7 +35,7 @@ G2L["3"]["CornerRadius"] = UDim.new(0, 10);
 G2L["4"] = Instance.new("Frame", G2L["2"]);
 G2L["4"]["BorderSizePixel"] = 0;
 G2L["4"]["BackgroundColor3"] = Color3.fromRGB(44, 60, 37);
-G2L["4"]["BackgroundTransparency"] = 0.800000011920929;
+G2L["4"]["BackgroundTransparency"] = 0.8999999761581421;
 G2L["4"]["Size"] = UDim2.new(0, 119, 0, 248);
 G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["4"]["Name"] = [[Tabs]];
@@ -422,11 +422,12 @@ G2L["34"]["BackgroundColor3"] = Color3.fromRGB(183, 183, 183);
 G2L["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["34"]["TextSize"] = 20;
 G2L["34"]["TextColor3"] = Color3.fromRGB(44, 60, 37);
+G2L["34"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["34"]["Size"] = UDim2.new(0, 16, 0, 16);
 G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["34"]["Text"] = [[?]];
 G2L["34"]["Name"] = [[Answer]];
-G2L["34"]["Position"] = UDim2.new(0.9096291065216064, 0, -0.02500000037252903, 0);
+G2L["34"]["Position"] = UDim2.new(0.9823564291000366, 0, 0.20000000298023224, 0);
 
 -- StarterGui.Hellmet Hack.Main.Weapon.Increase Pellets.Answer.UICorner
 G2L["35"] = Instance.new("UICorner", G2L["34"]);
