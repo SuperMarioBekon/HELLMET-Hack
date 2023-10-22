@@ -151,7 +151,6 @@ G2L["12"]["Size"] = UDim2.new(0, 97, 0, 45);
 G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["12"]["Text"] = [[Weapon]];
 G2L["12"]["Name"] = [[Weapon]];
-G2L["12"]["Visible"] = false;
 G2L["12"]["BackgroundTransparency"] = 1;
 G2L["12"]["Position"] = UDim2.new(0.5341176390647888, 0, -0.003931353334337473, 0);
 
@@ -524,6 +523,7 @@ G2L["3f"]["Size"] = UDim2.new(0, 97, 0, 45);
 G2L["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["3f"]["Text"] = [[Other...]];
 G2L["3f"]["Name"] = [[Other]];
+G2L["3f"]["Visible"] = false;
 G2L["3f"]["BackgroundTransparency"] = 1;
 G2L["3f"]["Position"] = UDim2.new(0.5341176390647888, 0, -0.003931353334337473, 0);
 
