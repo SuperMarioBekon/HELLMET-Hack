@@ -147,6 +147,7 @@ G2L["12"]["Size"] = UDim2.new(0, 97, 0, 45);
 G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["12"]["Text"] = [[Weapon]];
 G2L["12"]["Name"] = [[Weapon]];
+G2L["12"]["Visible"] = false;
 G2L["12"]["BackgroundTransparency"] = 1;
 G2L["12"]["Position"] = UDim2.new(0.5341176390647888, 0, -0.003931353334337473, 0);
 
@@ -331,7 +332,6 @@ G2L["28"]["Size"] = UDim2.new(0, 97, 0, 45);
 G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["28"]["Text"] = [[Other...]];
 G2L["28"]["Name"] = [[Other]];
-G2L["28"]["Visible"] = false;
 G2L["28"]["BackgroundTransparency"] = 1;
 G2L["28"]["Position"] = UDim2.new(0.5341176390647888, 0, -0.003931353334337473, 0);
 
@@ -710,8 +710,8 @@ local script = G2L["32"];
 	local GUI = script.Parent.Parent.Parent.Parent
 	
 	local frame = script.Parent.Parent.Parent
-	local transparency = 0
-	local transparencyStep = 0.1
+	local transparency = 0.8
+	local transparencyStep = 0.025
 	
 	local soundId = "rbxassetid://9118052301"
 	
@@ -719,11 +719,12 @@ local script = G2L["32"];
 	soundInstance.SoundId = soundId
 	soundInstance.Parent = button
 	soundInstance.PlayOnRemove = true
+	soundInstance.PlaybackSpeed = 0.5
 	
 	local isPlaying = false
 	
 	local function fadeOut()
-		while transparency < 0.8 do
+		while transparency < 1 do
 			transparency = transparency + transparencyStep
 			frame.BackgroundTransparency = transparency
 			wait(0.1)
@@ -738,6 +739,10 @@ local script = G2L["32"];
 			fadeOut()
 		end
 	end)
+	
+	
+	
+	
 end;
 task.spawn(C_32);
 -- StarterGui.Hellmet Hack.Gui futures.UnlockMouse
